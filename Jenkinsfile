@@ -12,7 +12,7 @@ pipeline{
         stage('compile-app'){
             steps{
                 echo 'this is the compile job'
-                sh 'mvm install'
+                sh 'mvm compile'
             }
         }
         stage('test-app'){
@@ -24,7 +24,7 @@ pipeline{
         stage('package-app'){
             steps{
                 echo 'this is the package job'
-                sh 'mvm run package'
+                sh 'mvm package'
             }
         }
     }
@@ -36,4 +36,4 @@ pipeline{
         
     }
     
-}
+
